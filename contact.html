@@ -19,8 +19,6 @@
     <div class="nav-logo">
       <!-- LOGO: Replace filename with your real logo when ready -->
       <img src="b07b1ca0-15f2-4ee8-ba8f-651d397db113.png" alt="Shipping &amp; Compliance" />
-      <!-- COMPANY NAME in the nav bar -->
-      <div class="nav-brand">Shipping &amp; <span>Compliance</span></div>
     </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -47,34 +45,36 @@
        CONTACT SECTION
        ===================================================== -->
   <section class="section">
-    <div class="contact-grid">
+    <div class="contact-details-only">
 
-      <!-- =====================================================
-           LEFT COLUMN — contact details
-           ===================================================== -->
-      <div class="contact-info">
-        <!-- SMALL LABEL above the heading -->
-        <div class="eyebrow" style="color:var(--amber); font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.75rem;">We're Here to Help</div>
+      <!-- HEADING and intro -->
+      <div class="section-header">
+        <div class="eyebrow">Get in Touch</div>
         <!-- HEADING -->
         <h2>Let's Start the Conversation</h2>
         <!-- INTRO PARAGRAPH -->
         <p>Tell us what you're shipping, where it's going, and any compliance concerns — we'll come back to you with a clear plan and a competitive quote.</p>
+      </div>
+
+      <div class="contact-details-grid">
 
         <!-- PHONE NUMBER: Replace with your real number -->
         <div class="contact-detail">
           <div class="contact-detail-icon">📞</div>
           <div>
             <h4>Phone</h4>
-            <p>+353 1 234 5678</p>
+            <!-- The "tel:" link lets mobile visitors tap to call -->
+            <p><a href="tel:+35312345678">+353 1 234 5678</a></p>
           </div>
         </div>
 
-        <!-- EMAIL ADDRESS: Replace with your real email -->
+        <!-- EMAIL ADDRESS: Replace with your real email.
+             Update both the href="mailto:..." and the visible text to match. -->
         <div class="contact-detail">
           <div class="contact-detail-icon">📧</div>
           <div>
             <h4>Email</h4>
-            <p>info@shippingandregulation.ie</p>
+            <p><a href="mailto:info@shippingandcompliance.ie">info@shippingandcompliance.ie</a></p>
           </div>
         </div>
 
@@ -96,80 +96,8 @@
             <p>Monday – Friday: 08:00 – 18:00<br>Saturday: 09:00 – 13:00</p>
           </div>
         </div>
+
       </div>
-
-      <!-- =====================================================
-           RIGHT COLUMN — enquiry form
-           Note: this form currently just shows a success message when submitted.
-           To make it actually send emails you'll need a form service like Formspree —
-           ask your developer to hook that up when the site goes live.
-           ===================================================== -->
-      <div class="contact-form-wrap">
-        <form id="contact-form" onsubmit="handleSubmit(event)">
-
-          <div class="form-row">
-            <div class="form-group">
-              <!-- FIELD LABEL and placeholder text -->
-              <label for="first-name">First Name</label>
-              <input type="text" id="first-name" name="first_name" placeholder="John" required />
-            </div>
-            <div class="form-group">
-              <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="last_name" placeholder="Murphy" required />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="john@company.ie" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="+353 87 000 0000" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="company">Company Name</label>
-            <input type="text" id="company" name="company" placeholder="Your company" />
-          </div>
-
-          <!-- ENQUIRY TYPE DROPDOWN: Add, remove, or rename options to match your services -->
-          <div class="form-group">
-            <label for="enquiry-type">Enquiry Type</label>
-            <select id="enquiry-type" name="enquiry_type">
-              <option value="">— Select one —</option>
-              <option value="freight">Freight Brokerage</option>
-              <option value="compliance">Regulatory Compliance</option>
-              <option value="customs">Customs &amp; Documentation</option>
-              <option value="supply-chain">Supply Chain Coordination</option>
-              <option value="general">General Enquiry</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <!-- PLACEHOLDER TEXT inside the message box — update the prompt if you like -->
-            <textarea id="message" name="message" placeholder="Tell us about your shipment — origin, destination, cargo type, volume, and any specific compliance requirements..." required></textarea>
-          </div>
-
-          <!-- SUBMIT BUTTON TEXT -->
-          <button type="submit" class="btn btn-primary" style="width:100%; font-size:1rem;">Send Enquiry</button>
-
-          <!-- SMALL NOTE below the button -->
-          <p class="form-note">We aim to respond to all enquiries within one business day.</p>
-        </form>
-
-        <!-- SUCCESS MESSAGE: Shown after the form is submitted.
-             Update this text if you like. -->
-        <div id="form-success" style="display:none; padding:2rem; background:#f0fdf4; border:1.5px solid #86efac; border-radius:var(--radius); text-align:center;">
-          <div style="font-size:2rem; margin-bottom:0.75rem;">✅</div>
-          <h3 style="color:#166534; margin-bottom:0.5rem;">Enquiry Sent</h3>
-          <p style="color:#166534;">Thanks for getting in touch. We'll be back with you within one business day.</p>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -190,13 +118,6 @@
     </div>
   </footer>
 
-  <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      document.getElementById('contact-form').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    }
-  </script>
 
 </body>
 </html>
